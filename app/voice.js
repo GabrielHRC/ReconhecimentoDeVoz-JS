@@ -12,6 +12,7 @@ function onSpeak(e) {
     chute = e.results[0][0].transcript
     console.log(chute)
     exibeChute(chute)
+    verificaChute(chute);
 }
 
 function exibeChute(chute) {
@@ -20,3 +21,5 @@ function exibeChute(chute) {
     <span class="box">${chute}</span>
     `
 }
+
+recognition.addEventListener('end', ()=> recognition.start())
